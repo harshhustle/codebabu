@@ -35,3 +35,4 @@ after 'deploy:symlink:release', 'restart the server' do
     execute "service gunicorn restart"
   end
 end
+
