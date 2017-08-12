@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+	<head>
+		<title>Code Babu</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'main.css' %}" />
+	</head>
+	<body>
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="http://codebabu.com" class="logo">CODE  BABU</a>
+					<nav id="nav">
+						<a href="http://codebabu.com">Home</a>
+						<a href="http://codebabu.com/ctracker/">Code Tracker</a>
+                        			<a href="http://codebabu.com/tutorials/">Tutorials</a>
+						<a href="http://codebabu.com/about/">About Us</a>
+					</nav>
+				</div>
+				<div class="header">
+					{% block content %}
+					{% endblock %}
+				</div>
+			</header>
+			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+	</body>
+</html>
