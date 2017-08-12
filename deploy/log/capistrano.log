@@ -1,0 +1,173 @@
+# Logfile created on 2017-08-12 19:38:27 +0530 by logger.rb/47272
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-12 19:38:27 +0530 cap production console
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-12 19:38:58 +0530 cap production console
+  INFO ---------------------------------------------------------------------------
+  INFO [be9c8af6] Running /usr/bin/env ls as deploy_user@codebabu.com
+ DEBUG [be9c8af6] Command: /usr/bin/env ls
+  INFO [be9c8af6] Finished in 1.287 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-12 19:39:12 +0530 cap production console
+  INFO ---------------------------------------------------------------------------
+  INFO [ef65e065] Running /usr/bin/env pwd as deploy_user@codebabu.com
+ DEBUG [ef65e065] Command: /usr/bin/env pwd
+ DEBUG [ef65e065] 	/home/deploy_user
+  INFO [ef65e065] Finished in 0.733 seconds with exit status 0 (successful).
+  INFO [0dee8aec] Running uname -a as deploy_user@codebabu.com
+ DEBUG [0dee8aec] Command: uname -a
+ DEBUG [0dee8aec] 	Linux django-512mb-blr1-01 3.13.0-79-generic #123-Ubuntu SMP Fri Feb 19 14:27:58 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
+  INFO [0dee8aec] Finished in 0.036 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-12 19:39:49 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [1ce0ed46] Running /usr/bin/env mkdir -p /tmp as deploy_user@codebabu.com
+ DEBUG [1ce0ed46] Command: /usr/bin/env mkdir -p /tmp
+  INFO [e6e8062c] Running /usr/bin/env #<StringIO:0x007fb85b854a60> /tmp/git-ssh-codebabu-production-kreddy.sh as deploy_user@codebabu.com
+ DEBUG [e6e8062c] Command: /usr/bin/env #<StringIO:0x007fb85b854a60> /tmp/git-ssh-codebabu-production-kreddy.sh
+  INFO [c7d48f40] Running /usr/bin/env chmod 700 /tmp/git-ssh-codebabu-production-kreddy.sh as deploy_user@codebabu.com
+ DEBUG [c7d48f40] Command: /usr/bin/env chmod 700 /tmp/git-ssh-codebabu-production-kreddy.sh
+  INFO [dbf471fc] Running /usr/bin/env git ls-remote git@github.com:uharsha/codebabu.git HEAD as deploy_user@codebabu.com
+ DEBUG [dbf471fc] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-codebabu-production-kreddy.sh" ; /usr/bin/env git ls-remote git@github.com:uharsha/codebabu.git HEAD )
+  INFO [252aacd7] Running /usr/bin/env mkdir -p /home/django/codebabu/shared /home/django/codebabu/releases as deploy_user@codebabu.com
+ DEBUG [252aacd7] Command: /usr/bin/env mkdir -p /home/django/codebabu/shared /home/django/codebabu/releases
+ DEBUG [23b67309] Running [ -f /home/django/codebabu/current/REVISION ] as deploy_user@codebabu.com
+ DEBUG [23b67309] Command: [ -f /home/django/codebabu/current/REVISION ]
+ DEBUG [356594c9] Running /usr/bin/env cat /home/django/codebabu/current/REVISION 2>/dev/null as deploy_user@codebabu.com
+ DEBUG [356594c9] Command: /usr/bin/env cat /home/django/codebabu/current/REVISION 2>/dev/null
+ DEBUG [d56838a3] Running [ -f /home/django/codebabu/repo/HEAD ] as deploy_user@codebabu.com
+ DEBUG [d56838a3] Command: [ -f /home/django/codebabu/repo/HEAD ]
+  INFO The repository mirror is at /home/django/codebabu/repo
+ DEBUG [5a0c3f59] Running if test ! -d /home/django/codebabu/repo; then echo "Directory does not exist '/home/django/codebabu/repo'" 1>&2; false; fi as deploy_user@codebabu.com
+ DEBUG [5a0c3f59] Command: if test ! -d /home/django/codebabu/repo; then echo "Directory does not exist '/home/django/codebabu/repo'" 1>&2; false; fi
+  INFO [680063a0] Running /usr/bin/env git remote set-url origin git@github.com:uharsha/codebabu.git as deploy_user@codebabu.com
+ DEBUG [680063a0] Command: cd /home/django/codebabu/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-codebabu-production-kreddy.sh" ; /usr/bin/env git remote set-url origin git@github.com:uharsha/codebabu.git )
+  INFO [d636986d] Running /usr/bin/env git remote update --prune as deploy_user@codebabu.com
+ DEBUG [d636986d] Command: cd /home/django/codebabu/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-codebabu-production-kreddy.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [e79583af] Running if test ! -d /home/django/codebabu/repo; then echo "Directory does not exist '/home/django/codebabu/repo'" 1>&2; false; fi as deploy_user@codebabu.com
+ DEBUG [e79583af] Command: if test ! -d /home/django/codebabu/repo; then echo "Directory does not exist '/home/django/codebabu/repo'" 1>&2; false; fi
+  INFO [6dbec5d2] Running /usr/bin/env mkdir -p /home/django/codebabu/releases/20170812140949 as deploy_user@codebabu.com
+ DEBUG [6dbec5d2] Command: cd /home/django/codebabu/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-codebabu-production-kreddy.sh" ; /usr/bin/env mkdir -p /home/django/codebabu/releases/20170812140949 )
+  INFO [4fed31be] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/django/codebabu/releases/20170812140949 as deploy_user@codebabu.com
+ DEBUG [4fed31be] Command: cd /home/django/codebabu/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-codebabu-production-kreddy.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/django/codebabu/releases/20170812140949 )
+ DEBUG [fbbfe3db] Running if test ! -d /home/django/codebabu/repo; then echo "Directory does not exist '/home/django/codebabu/repo'" 1>&2; false; fi as deploy_user@codebabu.com
+ DEBUG [fbbfe3db] Command: if test ! -d /home/django/codebabu/repo; then echo "Directory does not exist '/home/django/codebabu/repo'" 1>&2; false; fi
+ DEBUG [10e15202] Running /usr/bin/env git rev-list --max-count=1 master as deploy_user@codebabu.com
+ DEBUG [10e15202] Command: cd /home/django/codebabu/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-codebabu-production-kreddy.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [8bc21bf8] Running if test ! -d /home/django/codebabu/releases/20170812140949; then echo "Directory does not exist '/home/django/codebabu/releases/20170812140949'" 1>&2; false; fi as deploy_user@codebabu.com
+ DEBUG [8bc21bf8] Command: if test ! -d /home/django/codebabu/releases/20170812140949; then echo "Directory does not exist '/home/django/codebabu/releases/20170812140949'" 1>&2; false; fi
+  INFO [29738670] Running /usr/bin/env echo "" >> REVISION as deploy_user@codebabu.com
+ DEBUG [29738670] Command: cd /home/django/codebabu/releases/20170812140949 && /usr/bin/env echo "" >> REVISION
+  INFO [b0dae0c9] Running /usr/bin/env ln -s /home/django/codebabu/releases/20170812140949 /home/django/codebabu/releases/current as deploy_user@codebabu.com
+ DEBUG [b0dae0c9] Command: /usr/bin/env ln -s /home/django/codebabu/releases/20170812140949 /home/django/codebabu/releases/current
+  INFO [28963f44] Running /usr/bin/env mv /home/django/codebabu/releases/current /home/django/codebabu as deploy_user@codebabu.com
+ DEBUG [28963f44] Command: /usr/bin/env mv /home/django/codebabu/releases/current /home/django/codebabu
+ DEBUG [e9b5eff1] Running /usr/bin/env ls -x /home/django/codebabu/releases as deploy_user@codebabu.com
+ DEBUG [e9b5eff1] Command: /usr/bin/env ls -x /home/django/codebabu/releases
+ DEBUG [6b703867] Running if test ! -d /home/django/codebabu/releases; then echo "Directory does not exist '/home/django/codebabu/releases'" 1>&2; false; fi as deploy_user@codebabu.com
+ DEBUG [6b703867] Command: if test ! -d /home/django/codebabu/releases; then echo "Directory does not exist '/home/django/codebabu/releases'" 1>&2; false; fi
+  INFO [cd7bc0d0] Running /usr/bin/env echo "Branch master (at ) deployed as release 20170812140949 by kreddy" >> /home/django/codebabu/revisions.log as deploy_user@codebabu.com
+ DEBUG [cd7bc0d0] Command: cd /home/django/codebabu/releases && /usr/bin/env echo "Branch master (at ) deployed as release 20170812140949 by kreddy" >> /home/django/codebabu/revisions.log
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-12 19:51:04 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [6b366193] Running /usr/bin/env mkdir -p /tmp as deploy_user@codebabu.com
+ DEBUG [6b366193] Command: /usr/bin/env mkdir -p /tmp
+  INFO [c3f0a496] Running /usr/bin/env #<StringIO:0x007fe982208230> /tmp/git-ssh-codebabu-production-kreddy.sh as deploy_user@codebabu.com
+ DEBUG [c3f0a496] Command: /usr/bin/env #<StringIO:0x007fe982208230> /tmp/git-ssh-codebabu-production-kreddy.sh
+  INFO [673ad2af] Running /usr/bin/env chmod 700 /tmp/git-ssh-codebabu-production-kreddy.sh as deploy_user@codebabu.com
+ DEBUG [673ad2af] Command: /usr/bin/env chmod 700 /tmp/git-ssh-codebabu-production-kreddy.sh
+  INFO [0db5cabc] Running /usr/bin/env git ls-remote git@github.com:uharsha/codebabu.git HEAD as deploy_user@codebabu.com
+ DEBUG [0db5cabc] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-codebabu-production-kreddy.sh" ; /usr/bin/env git ls-remote git@github.com:uharsha/codebabu.git HEAD )
+  INFO [474ee805] Running /usr/bin/env mkdir -p /home/django/codebabu/shared /home/django/codebabu/releases as deploy_user@codebabu.com
+ DEBUG [474ee805] Command: /usr/bin/env mkdir -p /home/django/codebabu/shared /home/django/codebabu/releases
+ DEBUG [b3a6d926] Running [ -f /home/django/codebabu/current/REVISION ] as deploy_user@codebabu.com
+ DEBUG [b3a6d926] Command: [ -f /home/django/codebabu/current/REVISION ]
+ DEBUG [6df3cf93] Running /usr/bin/env cat /home/django/codebabu/current/REVISION 2>/dev/null as deploy_user@codebabu.com
+ DEBUG [6df3cf93] Command: /usr/bin/env cat /home/django/codebabu/current/REVISION 2>/dev/null
+ DEBUG [0cc9b205] Running [ -f /home/django/codebabu/repo/HEAD ] as deploy_user@codebabu.com
+ DEBUG [0cc9b205] Command: [ -f /home/django/codebabu/repo/HEAD ]
+  INFO The repository mirror is at /home/django/codebabu/repo
+ DEBUG [60b335ae] Running if test ! -d /home/django/codebabu/repo; then echo "Directory does not exist '/home/django/codebabu/repo'" 1>&2; false; fi as deploy_user@codebabu.com
+ DEBUG [60b335ae] Command: if test ! -d /home/django/codebabu/repo; then echo "Directory does not exist '/home/django/codebabu/repo'" 1>&2; false; fi
+  INFO [f5187393] Running /usr/bin/env git remote set-url origin git@github.com:uharsha/codebabu.git as deploy_user@codebabu.com
+ DEBUG [f5187393] Command: cd /home/django/codebabu/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-codebabu-production-kreddy.sh" ; /usr/bin/env git remote set-url origin git@github.com:uharsha/codebabu.git )
+  INFO [596cd9f3] Running /usr/bin/env git remote update --prune as deploy_user@codebabu.com
+ DEBUG [596cd9f3] Command: cd /home/django/codebabu/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-codebabu-production-kreddy.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [95e0f692] Running if test ! -d /home/django/codebabu/repo; then echo "Directory does not exist '/home/django/codebabu/repo'" 1>&2; false; fi as deploy_user@codebabu.com
+ DEBUG [95e0f692] Command: if test ! -d /home/django/codebabu/repo; then echo "Directory does not exist '/home/django/codebabu/repo'" 1>&2; false; fi
+  INFO [c84629f3] Running /usr/bin/env mkdir -p /home/django/codebabu/releases/20170812142104 as deploy_user@codebabu.com
+ DEBUG [c84629f3] Command: cd /home/django/codebabu/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-codebabu-production-kreddy.sh" ; /usr/bin/env mkdir -p /home/django/codebabu/releases/20170812142104 )
+  INFO [ccdd4c41] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/django/codebabu/releases/20170812142104 as deploy_user@codebabu.com
+ DEBUG [ccdd4c41] Command: cd /home/django/codebabu/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-codebabu-production-kreddy.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/django/codebabu/releases/20170812142104 )
+ DEBUG [3b56fe08] Running if test ! -d /home/django/codebabu/repo; then echo "Directory does not exist '/home/django/codebabu/repo'" 1>&2; false; fi as deploy_user@codebabu.com
+ DEBUG [3b56fe08] Command: if test ! -d /home/django/codebabu/repo; then echo "Directory does not exist '/home/django/codebabu/repo'" 1>&2; false; fi
+ DEBUG [d0945332] Running /usr/bin/env git rev-list --max-count=1 master as deploy_user@codebabu.com
+ DEBUG [d0945332] Command: cd /home/django/codebabu/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-codebabu-production-kreddy.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [1fa37166] Running if test ! -d /home/django/codebabu/releases/20170812142104; then echo "Directory does not exist '/home/django/codebabu/releases/20170812142104'" 1>&2; false; fi as deploy_user@codebabu.com
+ DEBUG [1fa37166] Command: if test ! -d /home/django/codebabu/releases/20170812142104; then echo "Directory does not exist '/home/django/codebabu/releases/20170812142104'" 1>&2; false; fi
+  INFO [272d93cb] Running /usr/bin/env echo "" >> REVISION as deploy_user@codebabu.com
+ DEBUG [272d93cb] Command: cd /home/django/codebabu/releases/20170812142104 && /usr/bin/env echo "" >> REVISION
+  INFO [081855e7] Running /usr/bin/env ln -s /home/django/codebabu/releases/20170812142104 /home/django/codebabu/releases/current as deploy_user@codebabu.com
+ DEBUG [081855e7] Command: /usr/bin/env ln -s /home/django/codebabu/releases/20170812142104 /home/django/codebabu/releases/current
+  INFO [bf0f5cb0] Running /usr/bin/env mv /home/django/codebabu/releases/current /home/django/codebabu as deploy_user@codebabu.com
+ DEBUG [bf0f5cb0] Command: /usr/bin/env mv /home/django/codebabu/releases/current /home/django/codebabu
+ DEBUG [432aabab] Running /usr/bin/env ls -x /home/django/codebabu/releases as deploy_user@codebabu.com
+ DEBUG [432aabab] Command: /usr/bin/env ls -x /home/django/codebabu/releases
+ DEBUG [f282221b] Running if test ! -d /home/django/codebabu/releases; then echo "Directory does not exist '/home/django/codebabu/releases'" 1>&2; false; fi as deploy_user@codebabu.com
+ DEBUG [f282221b] Command: if test ! -d /home/django/codebabu/releases; then echo "Directory does not exist '/home/django/codebabu/releases'" 1>&2; false; fi
+  INFO [9c1df771] Running /usr/bin/env echo "Branch master (at ) deployed as release 20170812142104 by kreddy" >> /home/django/codebabu/revisions.log as deploy_user@codebabu.com
+ DEBUG [9c1df771] Command: cd /home/django/codebabu/releases && /usr/bin/env echo "Branch master (at ) deployed as release 20170812142104 by kreddy" >> /home/django/codebabu/revisions.log
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-12 20:36:24 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [4dbf66d0] Running /usr/bin/env mkdir -p /tmp as deploy_user@codebabu.com
+ DEBUG [4dbf66d0] Command: /usr/bin/env mkdir -p /tmp
+  INFO [49da1e6c] Running /usr/bin/env #<StringIO:0x007f94941f9778> /tmp/git-ssh-codebabu-production-kreddy.sh as deploy_user@codebabu.com
+ DEBUG [49da1e6c] Command: /usr/bin/env #<StringIO:0x007f94941f9778> /tmp/git-ssh-codebabu-production-kreddy.sh
+  INFO [dec470f4] Running /usr/bin/env chmod 700 /tmp/git-ssh-codebabu-production-kreddy.sh as deploy_user@codebabu.com
+ DEBUG [dec470f4] Command: /usr/bin/env chmod 700 /tmp/git-ssh-codebabu-production-kreddy.sh
+  INFO [166a3070] Running /usr/bin/env git ls-remote git@github.com:uharsha/codebabu.git HEAD as deploy_user@codebabu.com
+ DEBUG [166a3070] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-codebabu-production-kreddy.sh" ; /usr/bin/env git ls-remote git@github.com:uharsha/codebabu.git HEAD )
+  INFO [40759f38] Running /usr/bin/env mkdir -p /home/django/codebabu/shared /home/django/codebabu/releases as deploy_user@codebabu.com
+ DEBUG [40759f38] Command: /usr/bin/env mkdir -p /home/django/codebabu/shared /home/django/codebabu/releases
+ DEBUG [2727dadc] Running [ -f /home/django/codebabu/current/REVISION ] as deploy_user@codebabu.com
+ DEBUG [2727dadc] Command: [ -f /home/django/codebabu/current/REVISION ]
+ DEBUG [29ad9cef] Running /usr/bin/env cat /home/django/codebabu/current/REVISION 2>/dev/null as deploy_user@codebabu.com
+ DEBUG [29ad9cef] Command: /usr/bin/env cat /home/django/codebabu/current/REVISION 2>/dev/null
+ DEBUG [de999005] Running [ -f /home/django/codebabu/repo/HEAD ] as deploy_user@codebabu.com
+ DEBUG [de999005] Command: [ -f /home/django/codebabu/repo/HEAD ]
+  INFO The repository mirror is at /home/django/codebabu/repo
+ DEBUG [20ea94f4] Running if test ! -d /home/django/codebabu/repo; then echo "Directory does not exist '/home/django/codebabu/repo'" 1>&2; false; fi as deploy_user@codebabu.com
+ DEBUG [20ea94f4] Command: if test ! -d /home/django/codebabu/repo; then echo "Directory does not exist '/home/django/codebabu/repo'" 1>&2; false; fi
+  INFO [6c7b6c40] Running /usr/bin/env git remote set-url origin git@github.com:uharsha/codebabu.git as deploy_user@codebabu.com
+ DEBUG [6c7b6c40] Command: cd /home/django/codebabu/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-codebabu-production-kreddy.sh" ; /usr/bin/env git remote set-url origin git@github.com:uharsha/codebabu.git )
+  INFO [05734fca] Running /usr/bin/env git remote update --prune as deploy_user@codebabu.com
+ DEBUG [05734fca] Command: cd /home/django/codebabu/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-codebabu-production-kreddy.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [b7a4867b] Running if test ! -d /home/django/codebabu/repo; then echo "Directory does not exist '/home/django/codebabu/repo'" 1>&2; false; fi as deploy_user@codebabu.com
+ DEBUG [b7a4867b] Command: if test ! -d /home/django/codebabu/repo; then echo "Directory does not exist '/home/django/codebabu/repo'" 1>&2; false; fi
+  INFO [79cb9bc9] Running /usr/bin/env mkdir -p /home/django/codebabu/releases/20170812150624 as deploy_user@codebabu.com
+ DEBUG [79cb9bc9] Command: cd /home/django/codebabu/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-codebabu-production-kreddy.sh" ; /usr/bin/env mkdir -p /home/django/codebabu/releases/20170812150624 )
+  INFO [4a0ed63f] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/django/codebabu/releases/20170812150624 as deploy_user@codebabu.com
+ DEBUG [4a0ed63f] Command: cd /home/django/codebabu/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-codebabu-production-kreddy.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/django/codebabu/releases/20170812150624 )
+ DEBUG [eb0b390f] Running if test ! -d /home/django/codebabu/repo; then echo "Directory does not exist '/home/django/codebabu/repo'" 1>&2; false; fi as deploy_user@codebabu.com
+ DEBUG [eb0b390f] Command: if test ! -d /home/django/codebabu/repo; then echo "Directory does not exist '/home/django/codebabu/repo'" 1>&2; false; fi
+ DEBUG [16d6c0ee] Running /usr/bin/env git rev-list --max-count=1 master as deploy_user@codebabu.com
+ DEBUG [16d6c0ee] Command: cd /home/django/codebabu/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-codebabu-production-kreddy.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [06939a33] Running if test ! -d /home/django/codebabu/releases/20170812150624; then echo "Directory does not exist '/home/django/codebabu/releases/20170812150624'" 1>&2; false; fi as deploy_user@codebabu.com
+ DEBUG [06939a33] Command: if test ! -d /home/django/codebabu/releases/20170812150624; then echo "Directory does not exist '/home/django/codebabu/releases/20170812150624'" 1>&2; false; fi
+  INFO [32d86808] Running /usr/bin/env echo "" >> REVISION as deploy_user@codebabu.com
+ DEBUG [32d86808] Command: cd /home/django/codebabu/releases/20170812150624 && /usr/bin/env echo "" >> REVISION
+  INFO [1143c0de] Running /usr/bin/env ln -s /home/django/codebabu/releases/20170812150624 /home/django/codebabu/releases/current as deploy_user@codebabu.com
+ DEBUG [1143c0de] Command: /usr/bin/env ln -s /home/django/codebabu/releases/20170812150624 /home/django/codebabu/releases/current
+  INFO [b5f3ef56] Running /usr/bin/env mv /home/django/codebabu/releases/current /home/django/codebabu as deploy_user@codebabu.com
+ DEBUG [b5f3ef56] Command: /usr/bin/env mv /home/django/codebabu/releases/current /home/django/codebabu
+  INFO [15814ef3] Running service gunicorn restart as deploy_user@codebabu.com
+ DEBUG [15814ef3] Command: service gunicorn restart
+ DEBUG [7c6c1975] Running /usr/bin/env ls -x /home/django/codebabu/releases as deploy_user@codebabu.com
+ DEBUG [7c6c1975] Command: /usr/bin/env ls -x /home/django/codebabu/releases
+ DEBUG [d59fd681] Running if test ! -d /home/django/codebabu/releases; then echo "Directory does not exist '/home/django/codebabu/releases'" 1>&2; false; fi as deploy_user@codebabu.com
+ DEBUG [d59fd681] Command: if test ! -d /home/django/codebabu/releases; then echo "Directory does not exist '/home/django/codebabu/releases'" 1>&2; false; fi
+  INFO [5ce2483b] Running /usr/bin/env echo "Branch master (at ) deployed as release 20170812150624 by kreddy" >> /home/django/codebabu/revisions.log as deploy_user@codebabu.com
+ DEBUG [5ce2483b] Command: cd /home/django/codebabu/releases && /usr/bin/env echo "Branch master (at ) deployed as release 20170812150624 by kreddy" >> /home/django/codebabu/revisions.log
