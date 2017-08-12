@@ -32,7 +32,7 @@ Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }
 after 'deploy:symlink:release', 'restart the server' do
   # stop and start the server. Kind of dirty. Bear with it.
   on roles(:app) do
-    execute "service gunicorn restart"
+    execute "sudo service gunicorn restart"
   end
 end
 
