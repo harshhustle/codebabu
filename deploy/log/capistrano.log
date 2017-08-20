@@ -414,3 +414,97 @@
   INFO [f039fd0b] Running /usr/bin/env echo "Branch master (at 2849a6e853802f10a62a01335a0213e71d8aaa62) deployed as release 20170812153636 by kreddy" >> /home/django/codebabu/revisions.log as deploy_user@codebabu.com
  DEBUG [f039fd0b] Command: cd /home/django/codebabu/releases && /usr/bin/env echo "Branch master (at 2849a6e853802f10a62a01335a0213e71d8aaa62) deployed as release 20170812153636 by kreddy" >> /home/django/codebabu/revisions.log
   INFO [f039fd0b] Finished in 0.047 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-20 11:32:19 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [f191d5cc] Running /usr/bin/env mkdir -p /tmp as deploy_user@codebabu.com
+ DEBUG [f191d5cc] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-20 11:53:09 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [20198372] Running /usr/bin/env mkdir -p /tmp as deploy_user@codebabu.com
+ DEBUG [20198372] Command: /usr/bin/env mkdir -p /tmp
+  INFO [20198372] Finished in 4.474 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-codebabu-production-harsha.sh 0.0%
+  INFO Uploading /tmp/git-ssh-codebabu-production-harsha.sh 100.0%
+  INFO [d25d2400] Running /usr/bin/env chmod 700 /tmp/git-ssh-codebabu-production-harsha.sh as deploy_user@codebabu.com
+ DEBUG [d25d2400] Command: /usr/bin/env chmod 700 /tmp/git-ssh-codebabu-production-harsha.sh
+  INFO [d25d2400] Finished in 0.015 seconds with exit status 0 (successful).
+  INFO [198a032e] Running /usr/bin/env git ls-remote git@github.com:uharsha/codebabu.git HEAD as deploy_user@codebabu.com
+ DEBUG [198a032e] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-codebabu-production-harsha.sh" ; /usr/bin/env git ls-remote git@github.com:uharsha/codebabu.git HEAD )
+ DEBUG [198a032e] 	94bfa4d394a1e2e3359b1d5bc4ca49212799f3e8	HEAD
+  INFO [198a032e] Finished in 3.309 seconds with exit status 0 (successful).
+  INFO [9bba1012] Running /usr/bin/env mkdir -p /home/django/codebabu/shared /home/django/codebabu/releases as deploy_user@codebabu.com
+ DEBUG [9bba1012] Command: /usr/bin/env mkdir -p /home/django/codebabu/shared /home/django/codebabu/releases
+  INFO [9bba1012] Finished in 0.016 seconds with exit status 0 (successful).
+ DEBUG [650c3da5] Running [ -f /home/django/codebabu/current/REVISION ] as deploy_user@codebabu.com
+ DEBUG [650c3da5] Command: [ -f /home/django/codebabu/current/REVISION ]
+ DEBUG [650c3da5] Finished in 0.013 seconds with exit status 0 (successful).
+ DEBUG [ab38e03a] Running /usr/bin/env cat /home/django/codebabu/current/REVISION 2>/dev/null as deploy_user@codebabu.com
+ DEBUG [ab38e03a] Command: /usr/bin/env cat /home/django/codebabu/current/REVISION 2>/dev/null
+ DEBUG [ab38e03a] 	e5792897fbf839bb67349f943f9d91e50fe4c4c5
+ DEBUG [ab38e03a] Finished in 0.014 seconds with exit status 0 (successful).
+ DEBUG [b5a57e8d] Running [ -f /home/django/codebabu/repo/HEAD ] as deploy_user@codebabu.com
+ DEBUG [b5a57e8d] Command: [ -f /home/django/codebabu/repo/HEAD ]
+ DEBUG [b5a57e8d] Finished in 0.014 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/django/codebabu/repo
+ DEBUG [611590d5] Running if test ! -d /home/django/codebabu/repo; then echo "Directory does not exist '/home/django/codebabu/repo'" 1>&2; false; fi as deploy_user@codebabu.com
+ DEBUG [611590d5] Command: if test ! -d /home/django/codebabu/repo; then echo "Directory does not exist '/home/django/codebabu/repo'" 1>&2; false; fi
+ DEBUG [611590d5] Finished in 0.013 seconds with exit status 0 (successful).
+  INFO [32b0378a] Running /usr/bin/env git remote set-url origin git@github.com:uharsha/codebabu.git as deploy_user@codebabu.com
+ DEBUG [32b0378a] Command: cd /home/django/codebabu/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-codebabu-production-harsha.sh" ; /usr/bin/env git remote set-url origin git@github.com:uharsha/codebabu.git )
+  INFO [32b0378a] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [96aee1d9] Running /usr/bin/env git remote update --prune as deploy_user@codebabu.com
+ DEBUG [96aee1d9] Command: cd /home/django/codebabu/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-codebabu-production-harsha.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [96aee1d9] 	Fetching origin
+ DEBUG [96aee1d9] 	From github.com:uharsha/codebabu
+ DEBUG [96aee1d9] 	   e579289..94bfa4d  master     -> master
+  INFO [96aee1d9] Finished in 3.715 seconds with exit status 0 (successful).
+ DEBUG [8a61445e] Running if test ! -d /home/django/codebabu/repo; then echo "Directory does not exist '/home/django/codebabu/repo'" 1>&2; false; fi as deploy_user@codebabu.com
+ DEBUG [8a61445e] Command: if test ! -d /home/django/codebabu/repo; then echo "Directory does not exist '/home/django/codebabu/repo'" 1>&2; false; fi
+ DEBUG [8a61445e] Finished in 0.012 seconds with exit status 0 (successful).
+  INFO [9d577d9d] Running /usr/bin/env mkdir -p /home/django/codebabu/releases/20170820062317 as deploy_user@codebabu.com
+ DEBUG [9d577d9d] Command: cd /home/django/codebabu/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-codebabu-production-harsha.sh" ; /usr/bin/env mkdir -p /home/django/codebabu/releases/20170820062317 )
+  INFO [9d577d9d] Finished in 0.015 seconds with exit status 0 (successful).
+  INFO [6926a9ba] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/django/codebabu/releases/20170820062317 as deploy_user@codebabu.com
+ DEBUG [6926a9ba] Command: cd /home/django/codebabu/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-codebabu-production-harsha.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/django/codebabu/releases/20170820062317 )
+  INFO [6926a9ba] Finished in 0.062 seconds with exit status 0 (successful).
+ DEBUG [400c21bd] Running if test ! -d /home/django/codebabu/repo; then echo "Directory does not exist '/home/django/codebabu/repo'" 1>&2; false; fi as deploy_user@codebabu.com
+ DEBUG [400c21bd] Command: if test ! -d /home/django/codebabu/repo; then echo "Directory does not exist '/home/django/codebabu/repo'" 1>&2; false; fi
+ DEBUG [400c21bd] Finished in 0.012 seconds with exit status 0 (successful).
+ DEBUG [1675dc0c] Running /usr/bin/env git rev-list --max-count=1 master as deploy_user@codebabu.com
+ DEBUG [1675dc0c] Command: cd /home/django/codebabu/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-codebabu-production-harsha.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [1675dc0c] 	94bfa4d394a1e2e3359b1d5bc4ca49212799f3e8
+ DEBUG [1675dc0c] Finished in 0.016 seconds with exit status 0 (successful).
+ DEBUG [0641992d] Running if test ! -d /home/django/codebabu/releases/20170820062317; then echo "Directory does not exist '/home/django/codebabu/releases/20170820062317'" 1>&2; false; fi as deploy_user@codebabu.com
+ DEBUG [0641992d] Command: if test ! -d /home/django/codebabu/releases/20170820062317; then echo "Directory does not exist '/home/django/codebabu/releases/20170820062317'" 1>&2; false; fi
+ DEBUG [0641992d] Finished in 0.013 seconds with exit status 0 (successful).
+  INFO [d061a29a] Running /usr/bin/env echo "94bfa4d394a1e2e3359b1d5bc4ca49212799f3e8" >> REVISION as deploy_user@codebabu.com
+ DEBUG [d061a29a] Command: cd /home/django/codebabu/releases/20170820062317 && /usr/bin/env echo "94bfa4d394a1e2e3359b1d5bc4ca49212799f3e8" >> REVISION
+  INFO [d061a29a] Finished in 0.016 seconds with exit status 0 (successful).
+  INFO [1d9e3648] Running /usr/bin/env ln -s /home/django/codebabu/releases/20170820062317 /home/django/codebabu/releases/current as deploy_user@codebabu.com
+ DEBUG [1d9e3648] Command: /usr/bin/env ln -s /home/django/codebabu/releases/20170820062317 /home/django/codebabu/releases/current
+  INFO [1d9e3648] Finished in 0.015 seconds with exit status 0 (successful).
+  INFO [d7f443f1] Running /usr/bin/env mv /home/django/codebabu/releases/current /home/django/codebabu as deploy_user@codebabu.com
+ DEBUG [d7f443f1] Command: /usr/bin/env mv /home/django/codebabu/releases/current /home/django/codebabu
+  INFO [d7f443f1] Finished in 0.015 seconds with exit status 0 (successful).
+  INFO [c15477af] Running sudo service gunicorn restart as deploy_user@codebabu.com
+ DEBUG [c15477af] Command: sudo service gunicorn restart
+ DEBUG [c15477af] 	gunicorn stop/waiting
+ DEBUG [c15477af] 	gunicorn start/running, process 29061
+  INFO [c15477af] Finished in 0.185 seconds with exit status 0 (successful).
+ DEBUG [a006ebc2] Running /usr/bin/env ls -x /home/django/codebabu/releases as deploy_user@codebabu.com
+ DEBUG [a006ebc2] Command: /usr/bin/env ls -x /home/django/codebabu/releases
+ DEBUG [a006ebc2] 	20170812151921	20170812153112	20170812153636	20170812154643	20170812155042
+20170820062317
+ DEBUG [a006ebc2] Finished in 0.021 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on codebabu.com
+  INFO [df0cc50e] Running /usr/bin/env rm -rf /home/django/codebabu/releases/20170812151921 as deploy_user@codebabu.com
+ DEBUG [df0cc50e] Command: /usr/bin/env rm -rf /home/django/codebabu/releases/20170812151921
+  INFO [df0cc50e] Finished in 0.038 seconds with exit status 0 (successful).
+ DEBUG [5794ab99] Running if test ! -d /home/django/codebabu/releases; then echo "Directory does not exist '/home/django/codebabu/releases'" 1>&2; false; fi as deploy_user@codebabu.com
+ DEBUG [5794ab99] Command: if test ! -d /home/django/codebabu/releases; then echo "Directory does not exist '/home/django/codebabu/releases'" 1>&2; false; fi
+ DEBUG [5794ab99] Finished in 0.013 seconds with exit status 0 (successful).
+  INFO [1f47de79] Running /usr/bin/env echo "Branch master (at 94bfa4d394a1e2e3359b1d5bc4ca49212799f3e8) deployed as release 20170820062317 by harsha" >> /home/django/codebabu/revisions.log as deploy_user@codebabu.com
+ DEBUG [1f47de79] Command: cd /home/django/codebabu/releases && /usr/bin/env echo "Branch master (at 94bfa4d394a1e2e3359b1d5bc4ca49212799f3e8) deployed as release 20170820062317 by harsha" >> /home/django/codebabu/revisions.log
+  INFO [1f47de79] Finished in 0.016 seconds with exit status 0 (successful).
